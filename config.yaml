@@ -1,0 +1,29 @@
+esphome:
+  name: esp-12v-trigger
+
+esp8266:
+  board: esp01_1m
+
+# Enable logging
+logger:
+
+# Enable Home Assistant API
+api:
+  password: ""
+
+ota:
+  password: ""
+
+wifi:
+  ssid: "Micci"
+  password: "kastadart"
+  manual_ip:
+    static_ip: x.x.x.x
+    gateway: x.x.x.x
+    subnet: 255.255.0.0
+
+switch:
+  - platform: gpio
+    pin: 
+      number: GPIO2
+    name: "Hifi 12v trigger"
